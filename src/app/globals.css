@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #F9F9F7;
+  --color-foreground: #000000;
+
+  --color-card: #F9F9F7;
+  --color-card-foreground: #000000;
+
+  --color-popover: #F9F9F7;
+  --color-popover-foreground: #000000;
+
+  --color-primary: #000000;
+  --color-primary-foreground: #FFFFFF;
+
+  --color-secondary: #E0E0E0;
+  --color-secondary-foreground: #000000;
+
+  --color-muted: #E0E0E0;
+  --color-muted-foreground: #737373;
+
+  --color-accent: #000000;
+  --color-accent-foreground: #FFFFFF;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fafafa;
+
+  --color-border: #D1D1D1;
+  --color-input: #D1D1D1;
+  --color-ring: #000000;
+
+  --color-chart-1: #000000;
+  --color-chart-2: #333333;
+  --color-chart-3: #666666;
+  --color-chart-4: #999999;
+  --color-chart-5: #CCCCCC;
+
+  --color-sidebar: #F9F9F7;
+  --color-sidebar-foreground: #000000;
+  --color-sidebar-primary: #000000;
+  --color-sidebar-primary-foreground: #FFFFFF;
+  --color-sidebar-accent: #E0E0E0;
+  --color-sidebar-accent-foreground: #000000;
+  --color-sidebar-border: #D1D1D1;
+  --color-sidebar-ring: #000000;
+
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", "Helvetica", "Arial", sans-serif;
+
+  --radius-lg: 0px;
+  --radius-md: 0px;
+  --radius-sm: 0px;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #D1D1D1;
+  }
+
+  :root {
+    --background: #F9F9F7;
+    --foreground: #000000;
+    --card: #F9F9F7;
+    --card-foreground: #000000;
+    --popover: #F9F9F7;
+    --popover-foreground: #000000;
+    --primary: #000000;
+    --primary-foreground: #FFFFFF;
+    --secondary: #E0E0E0;
+    --secondary-foreground: #000000;
+    --muted: #E0E0E0;
+    --muted-foreground: #737373;
+    --accent: #000000;
+    --accent-foreground: #FFFFFF;
+    --destructive: #ef4444;
+    --destructive-foreground: #fafafa;
+    --border: #D1D1D1;
+    --input: #D1D1D1;
+    --ring: #000000;
+    --radius: 0px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+  }
+
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1400px;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-italic {
+    font-family: var(--font-display);
+    font-style: italic;
+  }
+
+  .brand-logo {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 10vw, 8.75rem);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 0.9;
+  }
+
+  .section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .label-text {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .cta-link {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .cta-link:hover {
+    opacity: 0.7;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+nextjs-portal {
+  display: none !important;
+}
