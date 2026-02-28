@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { VisualEditsMessenger } from "orchids-visual-edits";
 
 import Header from "@/components/sections/header";
 import Footer from "@/components/sections/footer";
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Smile Pic Photography",
     images: [
       {
-        url: "/og-image.jpg", // Put 1200x630 image in public folder
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -47,9 +46,8 @@ export default function RootLayout({
 
         <Footer />
         <FloatingWhatsapp />
-        <VisualEditsMessenger />
 
-        {/* 🔥 Local Business Structured Data */}
+        {/* Local Business Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
