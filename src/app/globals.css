@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&family=EB+Garamond:wght@400;500&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #F2F1ED;
+  --color-foreground: #1A1A1A;
+
+  --color-card: #F2F1ED;
+  --color-card-foreground: #1A1A1A;
+
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #1A1A1A;
+
+  --color-primary: #1A1A1A;
+  --color-primary-foreground: #FFFFFF;
+
+  --color-secondary: #E5E4E0;
+  --color-secondary-foreground: #1A1A1A;
+
+  --color-muted: #E5E4E0;
+  --color-muted-foreground: #8C8C8C;
+
+  --color-accent: #FFFFFF;
+  --color-accent-foreground: #1A1A1A;
+
+  --color-destructive: #7F1D1D;
+  --color-destructive-foreground: #FFFFFF;
+
+  --color-border: #8C8C8C;
+  --color-input: #8C8C8C;
+  --color-ring: #1A1A1A;
+
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-serif: "EB Garamond", serif;
+
+  --radius-lg: 0px;
+  --radius-md: 0px;
+  --radius-sm: 0px;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #8C8C8C;
+  }
+
+  :root {
+    --background: #F2F1ED;
+    --foreground: #1A1A1A;
+    --card: #F2F1ED;
+    --card-foreground: #1A1A1A;
+    --popover: #FFFFFF;
+    --popover-foreground: #1A1A1A;
+    --primary: #1A1A1A;
+    --primary-foreground: #FFFFFF;
+    --secondary: #E5E4E0;
+    --secondary-foreground: #1A1A1A;
+    --muted: #E5E4E0;
+    --muted-foreground: #8C8C8C;
+    --accent: #FFFFFF;
+    --accent-foreground: #1A1A1A;
+    --destructive: #7F1D1D;
+    --destructive-foreground: #FFFFFF;
+    --border: #8C8C8C;
+    --input: #8C8C8C;
+    --ring: #1A1A1A;
+    --radius: 0px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "EB Garamond", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  .container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+
+  .font-sans {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .font-serif {
+    font-family: "EB Garamond", serif;
+  }
+
+  .text-label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  .nav-link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .btn-ghost {
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 12px 32px;
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-ghost:hover {
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+}
+
+@layer utilities {
+  .light-airy-overlay {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
