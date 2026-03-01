@@ -27,7 +27,7 @@ const Footer = () => {
           <div className="flex items-center gap-12 lg:gap-16">
 
             <a
-              href="https://www.facebook.com/profile.php?id=61579183461783"
+              href="https://www.facebook.com/profile.php?id=61584366203101"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#8C8C8C] hover:text-[#1A1A1A] transition-colors duration-300"

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Smile Pic Photography",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.jpg", // Put 1200x630 image in public folder
         width: 1200,
         height: 630,
       },
@@ -47,7 +47,7 @@ export default function RootLayout({
         <Footer />
         <FloatingWhatsapp />
 
-        {/* Local Business Structured Data */}
+        {/* 🔥 Local Business Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
